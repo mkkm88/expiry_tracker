@@ -9,57 +9,62 @@ class OnBoardingOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      extendBody: true,
       body: Stack(
         children: [
           SizedBox.expand(
-            child: Image.asset(
-              'assets/images/OnBoarding3.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/onB1.png', fit: BoxFit.cover),
           ),
           Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Track Expiry Dates,\nMake Informed \nChoice!"',
-                  softWrap: true,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 36.0,
-                    // fontWeight: FontWeight.bold,
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => OnBoardingTwo()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 255, 92, 45),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 90.0,
-                      vertical: 14.0,
-                    ),
-                    elevation: 5,
-                    shadowColor: Colors.black,
-                  ),
-                  child: Text(
-                    'GET STARTED',
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 1,
+                vertical: 70.0,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Track Expiry Dates,\nMake Informed \nChoice!"',
                     style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Ubuntu',
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                      fontSize: 40.0,
                     ),
                   ),
-                ),
-              ],
+                  Spacer(),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => OnBoardingTwo(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 255, 92, 45),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 90.0,
+                        vertical: 14.0,
+                      ),
+                      elevation: 5,
+                      shadowColor: Colors.black,
+                    ),
+                    child: Text(
+                      'GET STARTED',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           /*Align(

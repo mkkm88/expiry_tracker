@@ -11,48 +11,53 @@ class OnBoardingTwo extends StatelessWidget {
       body: Stack(
         children: [
           SizedBox.expand(
-            child: Image.asset(
-              'assets/images/OnBoarding1.jpg',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/onB2.png', fit: BoxFit.cover),
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 60),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 1,
+                vertical: 70.0,
+              ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Track Expiry Dates,\nMake Informed \nChoice!"',
+                    'SIMPLIFY YOUR PRODUCT \nORGANIZATION',
                     softWrap: true,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 36.0,
-                      // fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins',
+                      color: Colors.white70,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 24.0,
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 255, 92, 45),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 90.0,
-                        vertical: 14.0,
-                      ),
-                      elevation: 5,
-                      shadowColor: Colors.black,
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24.0,
+                      vertical: 10.0,
                     ),
-                    child: Text(
-                      'GET STARTED',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Ubuntu',
-                      ),
+                    child: Row(
+                      children: [
+                        Text('Skip', style: TextStyle(color: Colors.white)),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16.0,
+                        ),
+                        Spacer(),
+                        IconButton(
+                          style: IconButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 255, 92, 45),
+                          ),
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
